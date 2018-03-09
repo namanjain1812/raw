@@ -87,16 +87,9 @@ angular.module('raw.controllers', [])
         // txt
         if (file.type.search('text') != -1) {
           dataService.loadText(file)
-          .then(function(text){
+          .then(function(text){ 
             $scope.fileName = file.name;
             parseText(text);
-          })
-        }
-        else if(file.type.search('dvCSV') != -1){
-          dataService.loadText(file)
-          .then(function(dvCSV){
-            $scope.fileName = file.name;
-            parseText(dvCSV);
           })
         }
       }

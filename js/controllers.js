@@ -92,6 +92,13 @@ angular.module('raw.controllers', [])
             parseText(text);
           })
         }
+        else if(file.type.search('dvCSV') != -1){
+          dataService.loadText(file)
+          .then(function(dvCSV){
+            $scope.fileName = file.name;
+            parseText(dvCSV);
+          })
+        }
       }
     };
 

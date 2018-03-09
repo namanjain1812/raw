@@ -87,7 +87,7 @@ angular.module('raw.controllers', [])
         // txt
         if (file.type.search('text') != -1) {
           dataService.loadText(file)
-          .then(function(text){
+          .then(function(text){ 
             $scope.fileName = file.name;
             parseText(text);
           })
